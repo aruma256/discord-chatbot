@@ -1,8 +1,7 @@
 from openai import OpenAI
 openai_client = OpenAI()
 
-MODEL = "gpt-3.5-turbo"
-# MODEL = "gpt-4-turbo-preview"
+MODEL = "gpt-4-turbo-preview"
 
 def chat(message_history: list[dict]) -> str:
     message_history.insert(0, {"role": "system", "content": "**重要: 回答は端的に**（長文を求められた場合を除く）"})
